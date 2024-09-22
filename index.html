@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Taniti Tourism</title>
+  </head>
+  <body>
+    <header>
+      <div class="header"><img src="images/siteLogo.PNG" /></div>
+      <div class="navigation">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="visitUs.html">Visit Us</a></li>
+            <li><a href="exploreCity.html">Taniti City</a></li>
+            <li><a href="getOutside.html">Get Outside</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+<div class="slideshow-container">
+  <div class="mySlides">
+    <div class="slideContent">
+      <a href="visitUs.html">
+        <img
+          src="/images/islandHeader.jpg"
+          alt="Image 1"
+        />
+      </a>
+      <figcaption>Photo by Celina Reeb, taken in 2022. Mo'Orea.</figcaption>
+      <div class="slideText">Discover</div>
+    </div>
+  </div>
+</div>
+
+      <div class="mySlides">
+        <div class="slideContent">
+          <a href="exploreCity.html"> <img src="images/papeeteMarket.jpg" alt="Image 2" /></a>
+          <figcaption>Papeete Market. (2017, December 23). In Wikipedia. https://en.wikipedia.org/wiki/Papeete_Market</figcaption>
+          <div class="slideText">Explore the City</div>
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="slideContent">
+          <a href="getOutside.html"><img src="images/hikingPeak.jpg" alt="Image 3" /></a>
+          <figcaption>Photo by Celina Reeb, taken in 2022. Mo'Orea.</figcaption>
+          <div class="slideText">Get Outside</div>
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="slideContent">
+          <a href="food.html"><img src="images/foodPlate.jpg" alt="Image 4" /></a>
+          <figcaption>
+            Image source: "Add These Activities to Your Tahiti Dream List" by
+            Virtuoso,
+            <a
+              href="https://www.virtuoso.com/travel/articles/add-these-activities-to-your-tahiti-dream-list"
+              target="_blank"
+              >Virtuoso</a
+            >
+          </figcaption>
+          <div class="slideText">Cuisine</div>
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="slideContent">
+          <a href="faq.html"><img src="images/faqsPic.jpg" alt="Image 5" /></a>
+          <figcaption>
+            Image source: "Add These Activities to Your Tahiti Dream List" by
+            Virtuoso,
+            <a
+              href="https://www.virtuoso.com/travel/articles/add-these-activities-to-your-tahiti-dream-list"
+              target="_blank"
+              >Link</a
+            >
+          </figcaption>
+          <div class="slideText">FAQs</div>
+        </div>
+      </div>
+
+      <!-- Add more slides as needed -->
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Thumbnail navigation -->
+      <ul class="thumbnail">
+        <li>
+          <a href="javascript:void(0);" onclick="currentSlide(1)"
+            ><img src="images/islandHeader.jpg" alt="Thumbnail 1"
+          /></a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" onclick="currentSlide(2)"
+            ><img src="images/papeeteMarket.jpg" alt="Thumbnail 2"
+          /></a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" onclick="currentSlide(3)"
+            ><img src="images/hikingPeak.jpg" alt="Thumbnail 3"
+          /></a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" onclick="currentSlide(4)"
+            ><img src="images/foodPlate.jpg" alt="Thumbnail 4" /></a
+          ><!-- Image source: "Food in Tahiti" by Polynesia Paradise, https://www.polynesiaparadise.com/french-polynesia/tahiti-island/food-in-tahiti/ -->
+        </li>
+        <li>
+          <a href="javascript:void(0);" onclick="currentSlide(5)"
+            ><img src="images/faqsPic.jpg" alt="Thumbnail 5"
+          /></a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
